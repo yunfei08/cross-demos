@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script src="jquery-1.9.1.js"></script>
+    
+    <script>
+		
+        
+		 $(function () {
+            $('body').on('click', 'a', function () {
+                //crossDomain.visit(' parent.result("' + $(this).text() + '")');
+				document.getElementById('myfarme').src="http://www.a.com:8070/a_project/c.html?content="+encodeURI($(this).text());
+				//	document.getElementById('myfarme').contentWindow.test111();
+				//执行跨域访问，这里要传入调用方式的字符串方式
+                //parent.result($(this).text());    //同域下直接调用的方法
+            });
+        });
+    </script>
+</head>
+<body>
+<iframe id="myfarme" src="###"></iframe>
+
+<a href="#this">jzy</a>
+<a href="#this">hcl</a>
+</body>
+</html>
